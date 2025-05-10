@@ -7,6 +7,7 @@ public class ResponsibilityChainDemo {
         loggerChain.logMessage(AbstractLogger.INFO, "This is an information");
         loggerChain.logMessage(AbstractLogger.DEBUG, "This is a debug level information");
         loggerChain.logMessage(AbstractLogger.ERROR, "This is an error level information");
+        System.out.println(loggerChain);
     }
 
     public static AbstractLogger getChainOfLogger() {

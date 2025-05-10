@@ -1,15 +1,15 @@
 package com.sysu.responsibiliatyChain;
 
-import lombok.Setter;
+import lombok.Data;
 
-@Setter
+@Data
 public abstract class AbstractLogger {
     public static final Integer INFO = 3;
     public static final Integer DEBUG = 2;
     public static final Integer ERROR = 1;
 
     protected Integer level;
-    private AbstractLogger nextLogger;
+    protected AbstractLogger nextLogger;
 
     public void logMessage(Integer level, String message) {
         if (level <= this.level) {
